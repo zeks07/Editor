@@ -1,27 +1,37 @@
-This is a Kotlin Multiplatform project targeting Desktop (JVM).
+This is an Editor project built for a JetBrains internship application.
 
-* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
-    folder is the appropriate location.
+### Features
 
-### Build and Run Desktop (JVM) Application
+Editor pane highlights hard keywords always and soft keywords where appropriate.
+New highlights are easily added by overriding appropriate methods inside the 
+[Annotator](composeApp/src/jvmMain/kotlin/com/zeks/jetbrains/task/editor/Annotator.kt).
 
-To build and run the development version of the desktop app, use the run configuration from the run widget
+Console features color coding for standard and error output and user input. Error messages that include
+paths of the currently opened file are clickable and will focus the editor pane on the corresponding line.
+
+When a process is finished or forcefully stopped, the console will show the exit code of the process.
+
+### Video example
+
+[![Video example](https://img.youtube.com/vi/xZzzm27vA24/0.jpg)](https://youtu.be/xZzzm27vA24)
+
+
+### Screenshots
+
+Hard and soft keywords highlighting and compiler errors:
+<img src="images/compilation_errors.png" alt="Ide with syntax highlighting and two compilation errors produced by running the open script.">
+
+User input and runtime error:
+<img src="images/input_and_runtime_error.png" alt="Ide with visible user input and runtime error">
+
+Successful exit code:
+<img src="images/successful_exit.png" alt="Ide with successful exit code">
+
+### Build and Run on Windows
+
+To build and run the development version on windows, use the run configuration from the run widget
 in your IDE’s toolbar or run it directly from the terminal:
-- on macOS/Linux
-  ```shell
-  ./gradlew :composeApp:run
-  ```
-- on Windows
-  ```shell
-  .\gradlew.bat :composeApp:run
-  ```
 
----
-
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+  ```shell
+  .\gradlew run
+  ```
