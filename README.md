@@ -35,3 +35,8 @@ in your IDE’s toolbar or run it directly from the terminal:
   ```shell
   .\gradlew run
   ```
+
+### Notes
+
+This projects uses antlr and kotlin grammar taken from:
+https://github.com/Kotlin/kotlin-spec/tree/release
