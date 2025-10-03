@@ -29,7 +29,7 @@ Successful exit code:
 
 ### Build and Run on Windows
 
-To build and run the development version on windows, use the run configuration from the run widget
+To build and run the development version on Windows, use the run configuration from the run widget
 in your IDE’s toolbar or run it directly from the terminal:
 
   ```shell
@@ -38,5 +38,5 @@ in your IDE’s toolbar or run it directly from the terminal:
 
 ### Notes
 
-This projects uses antlr and kotlin grammar taken from:
+This projects uses antlr and Kotlin grammar taken from:
 https://github.com/Kotlin/kotlin-spec/tree/release
